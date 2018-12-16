@@ -1,0 +1,19 @@
+CXX=g++
+CPPFLAGS=-Wall -g -std=c++11
+OBJECTS=card.o lookup_tables.o popcount.o hand_evaluator.o
+all: $(OBJECTS)
+
+card.o:card.cpp card.hpp
+	$(CXX) $(CPPFLAGS) -c card.cpp
+
+lookup_tables.o:lookup_tables.cpp lookup_tables.hpp card.hpp
+	$(CXX) $(CPPFLAGS) -c lookup_tables.cpp
+
+popcount.o:popcount.hpp
+	$(CXX) $(CPPFLAGS)  popcount.hpp
+
+hand_evaluator.o:hand_evaluator.hpp hand_evaluator.cpp
+	$(CXX) $(CPPFLAGS)  -c hand_evaluator.cpp
+
+clean:
+	rm -rf $(OBJECTS) *.gch

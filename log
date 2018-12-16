@@ -1,0 +1,14 @@
+CXX src/utils.cpp
+CXX src/pokerstrategy.cpp
+CXX src/pokertrees.cpp
+CXX src/pokergames.cpp
+CXX src/pokercfr.cpp
+CXX src/lookup_tables.cpp
+CXX src/card.cpp
+CXX src/hand_evaluator.cpp
+src/hand_evaluator.cpp: In static member function ‘static float rl::HandEvaluator::evaluate_hand(std::vector<rl::Card>, std::vector<rl::Card>)’:
+src/hand_evaluator.cpp:38:9: warning: unused variable ‘percentile’ [-Wunused-variable]
+   float percentile = 0.0;
+         ^
+LD -o .build_release/lib/libcfr.so.1.0.0
+CXX/LD -o python/pycppcfr.so python/pycppcfr.cpp

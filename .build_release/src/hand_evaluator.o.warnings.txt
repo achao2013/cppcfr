@@ -1,0 +1,4 @@
+src/hand_evaluator.cpp: In static member function ‘static float rl::HandEvaluator::evaluate_hand(std::vector<rl::Card>, std::vector<rl::Card>)’:
+src/hand_evaluator.cpp:38:9: warning: unused variable ‘percentile’ [-Wunused-variable]
+   float percentile = 0.0;
+         ^
